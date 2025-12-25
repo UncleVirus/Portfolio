@@ -416,6 +416,121 @@
       color: var(--white);
     }
 
+    /* Education Section */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .education-card {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .education-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+    }
+
+    .education-card.featured {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05));
+      border: 2px solid var(--primary);
+    }
+
+    .education-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .education-card h3 {
+      font-size: 1.5rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .institution {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .period {
+      color: var(--gray);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    .education-badge {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Certifications Section */
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .cert-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      text-align: center;
+      border: 2px solid transparent;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+      border-color: var(--accent);
+    }
+
+    .cert-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .cert-card h4 {
+      font-size: 1.2rem;
+      color: var(--dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .cert-card p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
     /* Contact Section */
     .contact-content {
       max-width: 600px;
@@ -515,6 +630,9 @@
         <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="#contact" class="btn btn-secondary">Get In Touch</a>
       </div>
+      <div style="margin-top: 2rem; color: var(--light); font-size: 0.95rem;">
+        📍 Nairobi, Kenya | 📧 grivinjuma@gmail.com | 📱 +254718087082
+      </div>
     </div>
     <div class="scroll-indicator"></div>
   </header>
@@ -527,7 +645,7 @@
           <p>
             I'm a Business Intelligence and Data Engineering specialist who thrives in the intersection of 
             complex data systems and real-world business impact. With hands-on experience in production 
-            environments, I don't just build dashboards—I architect <strong>decision-making ecosystems</strong> 
+            environments, I don't just build dashboards, I architect <strong>decision-making ecosystems</strong> 
             that empower organizations to act with confidence.
           </p>
           <p>
@@ -537,7 +655,7 @@
             catch issues before they impact business decisions.
           </p>
           <p>
-            <strong> What sets me apart? </strong> <br>
+           <strong> What sets me apart? </strong> <br>
             I bridge the gap between technical excellence and business value. I speak both 
             the language of databases and stakeholders, translating complex data engineering concepts into 
             actionable business strategies. Whether it's optimizing query performance, implementing data 
@@ -783,6 +901,85 @@
               to resolution from 4 hours to 30 minutes.</p>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2>Education & Continuous Learning</h2>
+        <div class="education-grid">
+          <div class="education-card featured">
+            <div class="education-icon">🎓</div>
+            <div class="education-content">
+              <h3>Master of Science in Data Science & Analytics</h3>
+              <p class="institution">Strathmore University</p>
+              <p class="period"> 2026 | In Progress</p>
+              <p class="description">
+                Advanced program focusing on machine learning, big data technologies, predictive analytics, 
+                and AI-driven business intelligence. Specializing in production-scale data systems and 
+                enterprise analytics architecture.
+              </p>
+              <div class="education-badge">Current</div>
+            </div>
+          </div>
+
+          <div class="education-card">
+            <div class="education-icon">📚</div>
+            <div class="education-content">
+              <h3>Bachelor of Science in Information Technology</h3>
+              <p class="institution">Technical University of Mombasa</p>
+              <p class="period">2019 – 2024</p>
+              <p class="description">
+                Second Class Honors (Upper Division). Specialized in database systems, software engineering, 
+                and data analytics. Completed capstone projects in ETL pipeline development and business 
+                intelligence solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="container">
+        <h2>Professional Certifications</h2>
+        <div class="certifications-grid">
+          <div class="cert-card">
+            <div class="cert-icon">🐍</div>
+            <h4>Certified Python Developer</h4>
+            <p>Advanced Python programming for data engineering, automation, and analytics</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">⛓️</div>
+            <h4>Blockchain & Web3 Data Analytics</h4>
+            <p>Updraft Learning | On-chain analytics, DeFi data, smart contract analysis</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">☁️</div>
+            <h4>Cloud Computing & Cybersecurity</h4>
+            <p>Multi-cloud architecture, security best practices, compliance frameworks</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">🌐</div>
+            <h4>CCNA Networking Certification</h4>
+            <p>Kenyatta University (2021–2022) | Network infrastructure and protocols</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">🐧</div>
+            <h4>NGD Linux Certified</h4>
+            <p>Linux system administration, shell scripting, and server management</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">🤖</div>
+            <h4>ALX Certified Virtual Assistant</h4>
+            <p>Automation, workflow optimization, and productivity tools</p>
+          </div>
         </div>
       </div>
     </section>
